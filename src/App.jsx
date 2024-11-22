@@ -10,10 +10,15 @@ import CreateBook from './Admin/CreateBook'
 import AllRentedBooks from './Admin/AllRentedBooks'
 import Users from './components/Users'
 import Books from './components/Books'
+import NavBar from './NavBar'
 
 const router = createBrowserRouter([
   {
     path: '/',
+    element:<NavBar/>
+  },
+  {
+    path: '/register',
     element:<Register/>
   },
   {
