@@ -1,3 +1,4 @@
+import UpdateUser from '../components/UpdateUser';
 import { instance , protectedInstance} from '../services/instance'
 
 const userServices = {
@@ -27,7 +28,17 @@ const userServices = {
           console.error('Logout error:', error);
           throw error;
         }
-      }
+      },
+
+    UpdateUser : async (userName, email, phoneNumber, location) => {
+        const response = await protectedInstance.put('/users/updateUser', { userName, email, phoneNumber, location });
+        return response;
+    },
+
+    getAllUsers : async () => {
+        const response = await protectedInstance.get('/users/getAllUsers');
+        return response;
+    }
 }
 
 export default userServices

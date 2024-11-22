@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import userServices from '../services/userServices'
-import { useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
+import SideBar from './SideBar';
 
 function Dashboard() {
   const [user, setUser] = useState('');
@@ -33,15 +34,36 @@ const handleLogout = async () => {
   }
 };
 
+const isRootPath = location.pathname === '/dashboard';
+
   return (
     <>
-     <nav className="navbar">
+     <>
+      <nav className="navbar">
         <div className="container-fluid">
           <a className="navbar-brand">Hi {user.userName}</a>
           <button className="btn btn-primary" onClick={handleLogout}>Logout</button>
         </div>
       </nav>
-      </>
+
+      <div className="row mt-5">
+        <div className="col-md-3">
+          <SideBar user={user} />
+        </div>
+        <div className="col-md-9">
+          {isRootPath && (
+            <>
+              <h2>Welcome {user.userName}</h2>
+              <p>Email: {user.email}</p>
+              <p>Location: {user.location}</p>
+              <p>Phone Number: {user.phoneNumber}</p>
+            </>
+          )}
+          <Outlet />
+        </div>
+      </div>
+    </>
+    </>
   )
 }
 

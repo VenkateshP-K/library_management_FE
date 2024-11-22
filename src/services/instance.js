@@ -21,7 +21,6 @@ protectedInstance.interceptors.request.use(
     (config) => {
       const token = localStorage.getItem('token');
       if (token) {
-        console.log("Attaching token to request:", token);
         config.headers['Authorization'] = `Bearer ${token}`;
       } else {
         console.error("No token found in localStorage");
