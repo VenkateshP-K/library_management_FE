@@ -13,6 +13,7 @@ function Login() {
     try {
         const response = await userServices.LogIn(email, password);
         const token = response.data.token; // Ensure correct path to token
+
         if (!token) {
             console.error("Token is missing in the response");
             return;

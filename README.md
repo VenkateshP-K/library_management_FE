@@ -1,8 +1,7 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ This is a simple Library Management App built with React and Vite and bootstrap for css properties. It make it easy for librarians and users to manage their books and members.
 
-Currently, two official plugins are available:
+ Users can register, log in, list all books, rent a book, return a book, and view their profile.admin can create new books and view all rented books.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+to check admin mode, use email: admin@gmail.com and password: admin123
