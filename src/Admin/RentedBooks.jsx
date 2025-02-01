@@ -23,7 +23,7 @@ function RentedBooks() {
   //return a book
   const handleReturn = async (bookId) => {
     try {
-        await bookService.returnBook(bookId);
+        await bookServices.returnBook(bookId);
         alert("Book returned successfully");
         setBooks(books.map(book => 
             book._id === bookId ? { ...book, isRented: false } : book
@@ -47,6 +47,7 @@ function RentedBooks() {
               <h5 className="card-title">{book.title}</h5>
               <p className="card-text">Author: {book.author}</p>
               <p className="card-text">Description: {book.description}</p>
+              <button className="btn btn-primary" onClick={() => handleReturn(book._id)}>Return</button>
             </div>
           </div>
         ))}

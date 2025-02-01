@@ -63,9 +63,9 @@ function UpdateUser() {
     <div className="container mt-3">
       <div className="row">
         <div className="col-md-6 offset-md-3">
-          <div className="card">
-            <div className="card-header">
-              <h2 className="text-center">Update Your Details</h2>
+        <div className="card shadow border-0" style={{ backgroundColor: '#f8f9fa' }}>
+          <div className="card-header text-center bg-dark text-white py-2">
+            <h2>Update Your Details</h2>
             </div>
             <div className="card-body">
               <form onSubmit={handleUpdate}>
