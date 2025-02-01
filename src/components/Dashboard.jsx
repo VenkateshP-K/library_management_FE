@@ -41,8 +41,8 @@ const isRootPath = location.pathname === '/dashboard';
      <>
       <nav className="navbar">
         <div className="container-fluid">
-          <a className="navbar-brand">Hi {user.userName}</a>
-          <button className="btn btn-primary" onClick={handleLogout}>Logout</button>
+          <h2 className="navbar-brand">Hi {user.userName}</h2>
+          <button className="btn btn-dark" onClick={handleLogout}>Logout</button>
         </div>
       </nav>
 
