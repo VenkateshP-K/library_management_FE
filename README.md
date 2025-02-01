@@ -5,3 +5,17 @@
  Users can register, log in, list all books, rent a book, return a book, and view their profile.admin can create new books and view all rented books.
 
 to check admin mode, use email: admin@gmail.com and password: admin123
+
+## deployment
+- Netlify
+
+## Technologies
+- React
+- Vite
+- Bootstrap
+
+## Installation
+- npm install
+
+## Usage
+- Run the app with `npm run dev`
